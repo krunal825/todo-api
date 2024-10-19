@@ -25,29 +25,29 @@ This API allows users to manage their to-do lists by performing operations like 
    git clone https://github.com/yourusername/todo-api.git
    cd todo-api
 
-## 2. Install Dependencies Install the required packages:
+2. **Install Dependencies Install the required packages:**
    npm install
  
-## 3. Set Up Environment Variables Create a .env file in the root of your project with the following content:
+3. **Set Up Environment Variables Create a .env file in the root of your project with the following content:**
    MONGO_URI=mongodb://localhost:27017/todoapp
    JWT_SECRET=your_secret_key
 
-## 4. Start the MongoDB Server Ensure that you have MongoDB installed and running on your machine. If MongoDB is installed via Homebrew (on macOS), you can start it with:
+4. **Start the MongoDB Server Ensure that you have MongoDB installed and running on your machine. If MongoDB is installed via Homebrew (on macOS), you can start it with:**
    brew services start mongodb/brew/mongodb-community
-## If you’re using Windows, start the MongoDB service from the Services app or by running:
+**If you’re using Windows, start the MongoDB service from the Services app or by running:**
    net start MongoDB
 
-## Start the Server You can now start the Express server by running:
+**Start the Server You can now start the Express server by running:**
    npm start
 
-## The API will be running at http://localhost:5000.
+**The API will be running at http://localhost:5000.**
 
 
 
 ### API Documentation
 
   ## Authentication
-    1. Register User
+1. **Register User**
        Endpoint: POST /api/register
        Request Body:
                     {
@@ -60,7 +60,7 @@ This API allows users to manage their to-do lists by performing operations like 
                     "message": "User registered successfully"
                    }
 
-    2. Login User
+2. **Login User**
        Endpoint: POST /api/login
        Request Body:
                     {
@@ -75,7 +75,7 @@ This API allows users to manage their to-do lists by performing operations like 
 
 
 ## to-Do CRUD Operations
-    3. Create To-Do
+3. **Create To-Do**
         Endpoint: POST /api/todos
         Authorization: Bearer token (from login)
         Request Body:
@@ -93,9 +93,10 @@ This API allows users to manage their to-do lists by performing operations like 
                         }
 
 
-        4. Get All To-Dos
+4. **Get All To-Dos**
             Endpoint: GET /api/todos
             Authorization: Bearer token (from login)
+            
             Response:
                         [
                         {
@@ -106,9 +107,11 @@ This API allows users to manage their to-do lists by performing operations like 
                         }
                         ]
 
-        5. Get a Specific To-Do
+
+5. **Get a Specific To-Do**
             Endpoint: GET /api/todos/:id
             Authorization: Bearer token (from login)
+            
             Response:
                         {
                         "_id": "todo_id",
@@ -116,10 +119,11 @@ This API allows users to manage their to-do lists by performing operations like 
                         "description": "This is a test to-do item",
                         "status": "incomplete"
                         }
+            
             Replace :id with the actual To-Do ID.
 
 
-        6. Update a To-Do
+6. **Update a To-Do**
             Endpoint: PUT /api/todos/:id
             Authorization: Bearer token (from login)
             Request Body:
@@ -138,9 +142,10 @@ This API allows users to manage their to-do lists by performing operations like 
                         }
 
 
-        7. Delete a To-Do
+7. **Delete a To-Do**
             Endpoint: DELETE /api/todos/:id
             Authorization: Bearer token (from login)
+            
             Response:
                         {
                         "message": "To-Do item deleted successfully"
