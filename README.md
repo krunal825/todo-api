@@ -22,7 +22,7 @@ This API allows users to manage their to-do lists by performing operations like 
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/todo-api.git
+   git clone https://github.com/krunal825/todo-api.git
    cd todo-api
 
 2. **Install Dependencies Install the required packages:**
